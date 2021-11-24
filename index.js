@@ -15,6 +15,11 @@ connection();
 app.use(express.json());
 app.use(cors());
 
+
+app.get('/', (req,res) => {
+    res.send(`server running :) `)
+})
+
 //routed
 app.use("/api/employees", employees)
 
